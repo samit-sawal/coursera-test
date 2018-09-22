@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="nameCalculator">
     <head>
         <meta charset="utf-8"/>
-        <title>Hello Coursera</title>
+        <title>AngularJs Name Calculator</title>
         <!--<meta http-equiv="refresh" content="5">-->
+        <script src="angular.min.js"></script>
         <script src="app.js"></script>
         <style>
             body{font-size:1.5em;}
         </style>
     </head>
     <body>
-        <h1>Low Cohesion and Tight Coupling</h1>
-        <div id="nameCalculator">
+        <h1>AngularJs Name Calculator</h1>
+        <div ng-controller="nameCalculatorController">
             <div>
-                Your Name:<input type="text" id="name">
+                Your Name:<input type="text" ng-model="name" ng-keyup="displayNumeric();">
             </div>
-            <div id="output"></div>
+            <div>Total numeric value of person's name is: {{totalValue}}</div>
         </div>
     </body>
 
